@@ -1,0 +1,6 @@
+name: vault
+author: samczsun
+flag: PCTF{4LW4Y5_23R0_0U7_M3M0ry}
+tags: ["pwn", "u up?"]
+description: |
+  Smarter Contracts Inc. is releasing our new smart contract vaults featuring our patented SmartGuard™ technology. You can sleep easy knowing our secure code is keeping the hackers away from your precious coins.

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+IMAGE="gcr.io/paradigm-ctf/$1:latest"
+PORT="$2"
+HTTP_PORT="$3"
+
+if [ -z "$HTTP_PORT" ]; then
+    echo "[+] running challenge"
+    exec docker run \
+        -e "SKIP_SECRET=secret" \
+        -e "PORT=$PORT" \
+        -p "$PORT:$PORT" \
+        "$IMAGE"
+else
+    echo "[+] running eth challenge"
+    exec docker run \
+        -e "SKIP_SECRET=secret" \
+        -e "PORT=$PORT" \
+        -e "HTTP_PORT=$HTTP_PORT" \
+        -e "RPC_URL=$RPC_URL" \
+        -e "ENV=dev" \
+        -p "$PORT:$PORT" \
+        -p "$HTTP_PORT:$HTTP_PORT" \
+        "$IMAGE"
+fi

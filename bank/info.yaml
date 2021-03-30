@@ -1,0 +1,6 @@
+name: bank
+author: samczsun
+flag: PCTF{Y0_1_H4ERD_y0U_l1KE_reeN7R4NcY}
+tags: ["pwn", "u up?"]
+description: |
+  Smarter Contracts Inc. is proud to release our decentralized bank. Deposit any ERC20-compatible token and know that it'll be safely stored in our unhackable contracts.

@@ -1,0 +1,6 @@
+name: upgrade
+author: samczsun
+flag: PCTF{back_70_7h3_drAW1n9_B0arD}
+tags: ["pwn"]
+description: |
+  Circle released a new update to USDC but something seems off. Can you take a look?

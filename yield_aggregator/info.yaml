@@ -1,0 +1,6 @@
+name: yield_aggregator
+author: gakonst
+flag: PCTF{R33NTR4NCY_N3V3R_D13S}
+tags: ["pwn"]
+description: |
+    Set and forget yield aggregation services are great for the ecosystem.

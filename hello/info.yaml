@@ -1,0 +1,6 @@
+name: hello
+author: gakonst
+flag: PCTF{WelC0ME_70_P4R4DI9M_C7F}
+tags: ["sanity check"]
+description: |
+    Hello Paradigm CTF!

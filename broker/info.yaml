@@ -1,0 +1,6 @@
+name: broker
+author: gakonst
+flag: PCTF{SP07_0R4CL3S_L0L}
+tags: ["pwn"]
+description: |
+    This broker has pretty good rates

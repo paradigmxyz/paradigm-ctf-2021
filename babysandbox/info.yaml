@@ -1,0 +1,6 @@
+name: babysandbox
+author: samczsun
+flag: PCTF{57471Cc4ll_F1nG3rPR1N71Ng}
+tags: ["puzzle", "evm"]
+description: |
+  I read that staticcall will keep my contracts safe.

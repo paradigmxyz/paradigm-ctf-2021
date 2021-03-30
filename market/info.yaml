@@ -1,0 +1,6 @@
+name: market
+author: samczsun
+flag: PCTF{CRyPt0_Nam3_53rv1c3}
+tags: ["pwn"]
+description: |
+  Smarter Contracts Inc. has been hard at work developing the ultimate crypto collectible experience. We're proud to announce our new CryptoCollectibles contract and integrated marketplace.

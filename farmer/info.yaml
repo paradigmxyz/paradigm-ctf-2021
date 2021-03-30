@@ -1,0 +1,6 @@
+name: farmer
+author: gakonst
+flag: PCTF{PR0T3CT_Y0UR_H4RV3ST}
+tags: ["pwn"]
+description: |
+    COMPounding rewards are fun

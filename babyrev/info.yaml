@@ -1,0 +1,6 @@
+name: babyrev
+author: samczsun
+flag: PCTF{7URn5_0u7_i7_w45n7_53cur3_4F73R_4ll}
+tags: ["rev"]
+description: |
+  If I don't verify my source code, then hackers can't exploit my contract, right?

@@ -1,0 +1,6 @@
+name: babycrypto
+author: samczsun
+flag: PCTF{5H0uldve_Re4d_rfC_6979}
+tags: ["crypto"]
+description: |
+  I've written a super simple program to sign some data. Hopefully I didn't mess anything up!

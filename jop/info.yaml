@@ -1,0 +1,6 @@
+name: jop
+author: samczsun
+flag: PCTF{w3n_Rc3_0n_8l0ckcH41N}
+tags: ["pwn", "rev", "u up?"]
+description: |
+  Reentrancy is so boring, how about some jop?

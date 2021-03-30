@@ -1,0 +1,6 @@
+name: swap
+author: samczsun
+flag: PCTF{hon3y_1_Ov3rFLOw3d_7h3_M3MOry}
+tags: ["pwn", "u up?"]
+description: |
+  Smarter Contracts Inc. is proud to release our groundbreaking stablecoin swapping protocol. Swap between any supported stablecoin and never worry about slippage again.
