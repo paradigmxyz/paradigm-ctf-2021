@@ -11,7 +11,7 @@ build_challenge() {
     if [ ! -z "$solcv" ]; then
         pushd "$name/public"
         ROOT_DIR="$(cd .. && pwd)"
-        SOLC_VERSION="$solcv" solc "private=$ROOT_DIR/private/" "public=$ROOT_DIR/public/contracts" --combined-json bin contracts/Setup.sol > deploy/compiled.bin
+        SOLC_VERSION=solc-select "$solcv" && solc "private=$ROOT_DIR/private/" "public=$ROOT_DIR/public/contracts" --combined-json bin contracts/Setup.sol > deploy/compiled.bin
         sed -i.bak "s^${ROOT_DIR}^^g" deploy/compiled.bin && rm deploy/compiled.bin.bak
         popd
     fi
