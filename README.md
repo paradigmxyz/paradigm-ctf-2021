@@ -33,7 +33,7 @@ challenges, an additional port must be supplied so that users can connect to the
 node (which forks from mainnet state)
 
 ```
-./run babycrypto 31337
+./run.sh babycrypto 31337
 ```
 
 On another terminal:
@@ -45,7 +45,7 @@ nc localhost 31337
 For ETH challenges:
 
 ```
-./run bank 31337 8545
+./run.sh bank 31337 8545
 ```
 
 When prompted for the hashcash PoW, use the default secret `secret`:
@@ -65,7 +65,7 @@ here's some useful information
 ### Running the autosolver
 
 ```bash
-./solve
+./solve.sh
 ```
 
 ## Add a new challenge
