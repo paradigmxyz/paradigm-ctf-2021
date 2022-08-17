@@ -12,12 +12,11 @@
 ### Configuration
 
 You'll need to update the following environment variables:
-* `RPC_URL` to a valid Ethereum JSON-RPC endpoint
+* `ETH_RPC_URL` to a valid Ethereum JSON-RPC endpoint
 * `PYTHONPATH` to point to mpwn
 
 You'll also need to manually install the following:
-* `solc-select install 0.4.16 0.4.24 0.5.12 0.6.12 0.7.0 0.7.6 0.8.0`
-* `pip install ecdsa sha3`
+* `pip install ecdsa pysha3 web3`
 
 ### Build everything
 

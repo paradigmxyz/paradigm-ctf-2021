@@ -6,11 +6,14 @@ build_challenge() {
     name="$1"
     solcv="${2:-}"
 
-    tag="gcr.io/paradigm-ctf/$name:latest"
+    tag="gcr.io/paradigm-ctf/2021/$name:latest"
 
     if [ ! -z "$solcv" ]; then
         pushd "$name/public"
         ROOT_DIR="$(cd .. && pwd)"
+        if ! solc-select versions | grep "$solcv" >/dev/null 2>&1; then
+            solc-select install "$solcv"
+        fi
         SOLC_VERSION="$solcv" solc "private=$ROOT_DIR/private/" "public=$ROOT_DIR/public/contracts" --combined-json bin contracts/Setup.sol > deploy/compiled.bin
         sed -i.bak "s^${ROOT_DIR}^^g" deploy/compiled.bin && rm deploy/compiled.bin.bak
         popd
@@ -22,9 +25,6 @@ build_challenge() {
         docker push "$tag"
     fi
 }
-
-(cd challenge_base && docker build -t ctf/challenge_base:latest .)
-(cd eth_challenge_base && docker build -t ctf/eth_challenge_base:latest .)
 
 declare -a chals=(
     "babycrypto"

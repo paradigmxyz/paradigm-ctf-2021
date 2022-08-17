@@ -3,10 +3,12 @@ from mp import *
 import json
 import subprocess
 import os
+import time
 
 from typing import Tuple
 
 from web3 import Web3
+from web3.exceptions import TransactionNotFound
 from eth_account import Account
 
 REMOTE_IP = os.getenv("REMOTE_IP")
@@ -33,7 +35,14 @@ def compile() -> str:
 
 def send_tx(web3, tx):
     txhash = web3.eth.sendTransaction(tx)
-    rcpt = web3.eth.getTransactionReceipt(txhash)
+
+    while True:
+        try:
+            rcpt = web3.eth.getTransactionReceipt(txhash)
+            break
+        except TransactionNotFound:
+            time.sleep(0.1)
+            
     if rcpt.status != 1:
         raise Exception("deployment failed")
     return rcpt
@@ -41,7 +50,14 @@ def send_tx(web3, tx):
 def sign_send_tx(web3, account, tx):
     raw = account.sign_transaction(tx)
     txhash = web3.eth.sendRawTransaction(raw.rawTransaction)
-    rcpt = web3.eth.getTransactionReceipt(txhash)
+
+    while True:
+        try:
+            rcpt = web3.eth.getTransactionReceipt(txhash)
+            break
+        except TransactionNotFound:
+            time.sleep(0.1)
+    
     if rcpt.status != 1:
         raise Exception("deployment failed")
     return rcpt

@@ -47,11 +47,11 @@ declare -a chals=(
     "lockbox 0.4.24"
     "babysandbox 0.7.0"
     "market 0.7.0 20"
-    "upgrade 0.6.12"
+    # "upgrade 0.6.12" # unsolvable lol
     "secure 0.5.12 50"
     "jop 0.7.6 1"
     "rever 0.8.0 1"
-    # "swap 0.4.24 1000"
+    "swap 0.4.24 1000"
     "babyrev 0.4.24"
     "bouncer 0.8.0 100"
     "hello 0.8.0"

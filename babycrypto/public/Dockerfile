@@ -1,4 +1,4 @@
-FROM ctf/challenge_base:latest
+FROM gcr.io/paradigmxyz/ctf/base:latest
 
 COPY deploy/ /home/ctf/
 
