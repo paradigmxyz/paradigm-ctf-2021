@@ -1,4 +1,4 @@
-# CTF Data
+# Paradigm CTF 2021
 
 ## Installing
 
@@ -11,17 +11,19 @@
 
 ### Configuration
 
-You'll need to update the following environment variables:
+You'll need to set the following environment variables:
 * `ETH_RPC_URL` to a valid Ethereum JSON-RPC endpoint
 * `PYTHONPATH` to point to mpwn
 
 You'll also need to manually install the following:
 * `pip install ecdsa pysha3 web3`
 
+## Usage
+
 ### Build everything
 
 ```bash
-./build
+./build.sh
 ```
 
 ### Run a challenge
@@ -46,7 +48,21 @@ For ETH challenges:
 ./run bank 31337 8545
 ```
 
-## Running the autosolver
+When prompted for the hashcash PoW, use the default secret `secret`:
+
+```
+$ nc localhost 31337
+1 - launch new instance
+2 - get flag
+action? 1
+hashcash -mb24 gdrfjbxs = ? secret
+
+your private blockchain has been deployed
+it will automatically terminate in 30 minutes
+here's some useful information
+```
+
+### Running the autosolver
 
 ```bash
 ./solve

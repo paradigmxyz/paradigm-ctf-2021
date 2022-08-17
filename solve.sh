@@ -11,7 +11,7 @@ function solve_one() {
 
     echo "[+] solving $CHAL"
 
-    ./run "$CHAL" "31337" "8080" >/dev/null 2>&1 &
+    ./run.sh "$CHAL" "31337" "8080" >/dev/null 2>&1 &
     CHAL_PID="$!"
     function cleanup()
     {
